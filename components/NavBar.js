@@ -21,13 +21,13 @@ export default function NavBar() {
             <Link passHref href="/">
               <Nav.Link>Teams</Nav.Link>
             </Link>
-            <Link passHref href="/book/new">
+            <Link passHref href="/teams/new">
               <Nav.Link>Create Team</Nav.Link>
             </Link>
-            <Link passHref href="/author/authors">
+            <Link passHref href="/members/member">
               <Nav.Link>Members</Nav.Link>
             </Link>
-            <Link passHref href="/author/new">
+            <Link passHref href="/members/new">
               <Nav.Link>Create Members</Nav.Link>
             </Link>
             <Link passHref href="/profile">
