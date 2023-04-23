@@ -43,8 +43,11 @@ function MemberForm({ obj }) {
         .then(() => router.push(`/members/${obj.firebaseKey}`));
     } else {
       const payload = { ...formInput, uid: user.uid };
-      createMember(payload).then(() => {
-        router.push('/');
+      createMember(payload).then(({ name }) => {
+        const patchPayload = { firebaseKey: name };
+        updateMember(patchPayload).then(() => {
+          router.push('/');
+        });
       });
     }
   };

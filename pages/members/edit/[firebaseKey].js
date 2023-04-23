@@ -1,34 +1,19 @@
-/* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import { viewMemberDetails } from '../../../api/mergedData';
+import { getSingleMember } from '../../../api/members';
+import MemberForm from '../../../components/forms/MemberForm';
 
-export default function ViewMember() {
-  const [memberDetails, setMemberDetails] = useState({});
+export default function EditMember() {
+  const [editItem, setEditItem] = useState({});
   const router = useRouter();
-
-  // TODO: grab firebaseKey from url
+  // TODO: grab the firebasekey
   const { firebaseKey } = router.query;
 
-  // TODO: make call to API layer to get the data
+  // TODO: make a call to the API to get the book data
   useEffect(() => {
-    viewMemberDetails(firebaseKey).then(setMemberDetails);
+    getSingleMember(firebaseKey).then(setEditItem);
   }, [firebaseKey]);
 
-  return (
-    <div className="mt-5 d-flex flex-wrap">
-      <div className="d-flex flex-column">
-        <img src={memberDetails.image} alt={memberDetails.title} style={{ width: '300px' }} />
-      </div>
-      <div className="text-white ms-5 details">
-        <h5>
-          {memberDetails.title} by {memberDetails.teamObject?.team_name}
-        </h5>
-        <h5>
-          {memberDetails.role}
-        </h5>
-        Teams <a href={`mailto:${memberDetails.teamObject?.role}`}>{memberDetails.teamObject?.role}</a>
-      </div>
-    </div>
-  );
+  // TODO: pass object to form
+  return (<MemberForm obj={editItem} />);
 }
