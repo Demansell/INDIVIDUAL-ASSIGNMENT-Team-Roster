@@ -1,8 +1,8 @@
 {
-  "name": "next-firebase-starter",
+  "name": "roster app",
   "private": true,
   "version": "1.0.0",
-  "author": "Trinity Christiana",
+  "author": "Dustin Mansell",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
