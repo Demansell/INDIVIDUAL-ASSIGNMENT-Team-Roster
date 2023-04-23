@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+/* import React, { useEffect, useState } from 'react';
 import { useAuth } from '../../utils/context/authContext';
 import { getTeams } from '../../api/teams';
 import TeamCard from '../../components/TeamCard';
@@ -29,3 +29,4 @@ function ListTeams() {
 }
 
 export default ListTeams;
+*/

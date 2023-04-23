@@ -71,7 +71,7 @@ const updateTeam = (payload) => new Promise((resolve, reject) => {
 
 // TODO: GET A SINGLE AUTHOR'S BOOKS
 const getTeamMember = (firebaseKey) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/members.json?orderBy="author_id"&equalTo="${firebaseKey}"`, {
+  fetch(`${endpoint}/members.json?orderBy="team_id"&equalTo="${firebaseKey}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
