@@ -9,11 +9,9 @@ import { createMember, updateMember } from '../../api/members';
 import { getTeams } from '../../api/teams';
 
 const initialState = {
-  description: '',
+  role: '',
   image: '',
-  price: '',
-  sale: false,
-  title: '',
+  name: '',
 };
 
 function MemberForm({ obj }) {
@@ -99,7 +97,7 @@ function MemberForm({ obj }) {
           name="team_id"
           onChange={handleChange}
           className="mb-3"
-          value={obj.team_id} // FIXME: modify code to remove error
+          value={formInput.team_id} // FIXME: modify code to remove error
           required
         >
           <option value="">Select a Team</option>
