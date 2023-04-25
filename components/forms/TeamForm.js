@@ -8,7 +8,7 @@ import { useAuth } from '../../utils/context/authContext';
 import { createTeam, updateTeam } from '../../api/teams';
 
 const initialState = {
-  name: '',
+  team_name: '',
 };
 // this is a comment
 function TeamForm({ obj }) {
@@ -68,7 +68,7 @@ function TeamForm({ obj }) {
 
 TeamForm.propTypes = {
   obj: PropTypes.shape({
-    name: PropTypes.string,
+    team_name: PropTypes.string,
     firebaseKey: PropTypes.string,
   }),
 };
