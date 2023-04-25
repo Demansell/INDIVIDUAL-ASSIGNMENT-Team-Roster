@@ -39,7 +39,6 @@ TeamCard.propTypes = {
   teamObj: PropTypes.shape({
     team_name: PropTypes.string,
     firebaseKey: PropTypes.string,
-    team_id: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
 };
